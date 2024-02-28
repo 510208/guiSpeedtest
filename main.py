@@ -2,29 +2,29 @@ import subprocess
 import sys
 import logging
 
-# 這是你的套件列表
-required_packages = [
-    'tkinter',
-    # 'speedtest-cli',
-    'ttkthemes',
-    'logging',
-    'socket',
-    'requests',
-    'json',
-    'PIL',
-    'io',
-    'os'
-]
+# # 這是你的套件列表
+# required_packages = [
+#     'tkinter',
+#     # 'speedtest-cli',
+#     'ttkthemes',
+#     'logging',
+#     'socket',
+#     'requests',
+#     'json',
+#     'PIL',
+#     'io',
+#     'os'
+# ]
 
-for package in required_packages:
-    logging.info(f"嘗試導入套件：{package}")
-    try:
-        # 嘗試導入套件
-        __import__(package)
-    except ImportError:
-        logging.error(f"導入失敗，嘗試安裝套件：{package}")
-        # 如果導入失敗，則安裝套件
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
+# for package in required_packages:
+#     logging.info(f"嘗試導入套件：{package}")
+#     try:
+#         # 嘗試導入套件
+#         __import__(package)
+#     except ImportError:
+#         logging.error(f"導入失敗，嘗試安裝套件：{package}")
+#         # 如果導入失敗，則安裝套件
+#         subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
 
 import tkinter as tk
 import tkinter.font
